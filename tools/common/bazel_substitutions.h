@@ -38,15 +38,6 @@ class BazelPlaceholderSubstitutions {
   // caused the string to change.
   bool Apply(std::string &arg);
 
-  // The placeholder string used by Bazel that should be replaced by
-  // `DEVELOPER_DIR` at runtime.
-  static constexpr const char kBazelXcodeDeveloperDir[] =
-      "__BAZEL_XCODE_DEVELOPER_DIR__";
-
-  // The placeholder string used by Bazel that should be replaced by `SDKROOT`
-  // at runtime.
-  static constexpr const char kBazelXcodeSdkRoot[] = "__BAZEL_XCODE_SDKROOT__";
-
  private:
   // A resolver for a Bazel placeholder string that retrieves and caches the
   // value the first time it is requested.
